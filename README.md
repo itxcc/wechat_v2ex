@@ -1,4 +1,5 @@
-### wechat_v2ex
-v2ex信息浏览小程序
-### 运行
-下载本项目，去微信开发攻击创建新项目，导入即可看到运行效果
+###  v2ex简易浏览信息
+
+### 使用
+git clone git@github.com:itxcc/wechat_v2ex.git
+

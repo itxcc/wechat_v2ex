@@ -1,0 +1,12 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+    <image class="user-avatar" src="{{userinfo.avatar_large}}"></image>
+    <text class="user-name">{{userinfo.username}}</text>
+    <text class="user-bio">简介:{{userinfo.bio}}</text>
+    <text class="user-github">Github:{{userinfo.github}}</text>
+    <text class="user-website">WebSite:{{userinfo.website}}</text>
+    <text>发表的帖子</text>
+    <view class="user-topic" bindtap="showTopic" data-id="{{item.id}}" wx:for="{{userTopics}}" wx:key="{{item.id}}" >
+        {{item.title}}
+    </view>
+</view>

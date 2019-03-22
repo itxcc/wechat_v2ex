@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/hot/hot",
+    "pages/index/index",
+    "pages/latest/latest",
+    "pages/topic/topic",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/topicList/topicList",
+    "pages/node/node"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#212121",
+    "navigationBarTitleText": "V2EX",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f4f4",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#fff",
+    "backgroundColor": "#111111",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/hot/hot",
+        "text": "最热"
+      },
+      {
+        "pagePath": "pages/latest/latest",
+        "text": "最新"
+      },
+      {
+        "pagePath": "pages/node/node",
+        "text": "节点"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查询"
+      }
+    ]
+  }
+}

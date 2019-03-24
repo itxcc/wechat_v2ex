@@ -16,7 +16,7 @@
   <view class='content'>{{ topic.content }}</view>
   <view class="divider"></view>
 
-  <view class="reply" wx:for="{{ replies }}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.member.username}}" bindtap="searchUser">
+  <view class="reply" wx:for="{{ replies }}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.member.username}}">
     <view class='reply_top'>
       <image class="avatar fl" src="{{item.member.avatar_mini}}"></image>
       <text class="name">{{item.member.username}}</text>

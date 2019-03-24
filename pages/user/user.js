@@ -28,6 +28,7 @@ Page({
       url: `${topic}?username=${self.data.userinfo.username}`,
       method: 'GET',
       success: function (res) {
+        console.log(res.data);
         self.setData({
           userTopics: res.data
         })

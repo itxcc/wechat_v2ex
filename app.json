@@ -11,34 +11,36 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#212121",
+    "navigationBarBackgroundColor": "#fafafa",
     "navigationBarTitleText": "V2EX",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "backgroundColor": "#f4f4f4",
     "enablePullDownRefresh": false
   },
   "tabBar": {
-    "color": "#999",
-    "selectedColor": "#fff",
-    "backgroundColor": "#111111",
+    "color": "#444444",
+    "selectedColor": "#444444",
+    "backgroundColor": "#fafafa",
     "borderStyle": "white",
     "position": "bottom",
     "list": [
       {
         "pagePath": "pages/hot/hot",
-        "text": "最热"
+        "text": "最热",
+        "iconPath": "/img/hot.png",
+        "selectedIconPath": "/img/hotS.png"
       },
       {
         "pagePath": "pages/latest/latest",
-        "text": "最新"
+        "text": "最新",
+        "iconPath": "/img/new.png",
+        "selectedIconPath": "/img/newS.png"
       },
       {
         "pagePath": "pages/node/node",
-        "text": "节点"
-      },
-      {
-        "pagePath": "pages/search/search",
-        "text": "查询"
+        "text": "节点",
+        "iconPath": "/img/node.png",
+        "selectedIconPath": "/img/nodeS.png"
       }
     ]
   }

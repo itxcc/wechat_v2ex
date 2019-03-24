@@ -1,21 +1,34 @@
 
 <!--pages/topic/topic.wxml-->
 <view class="container">
-  <text class="title">{{ topic.title }}</text>
-  <view class="author">
-    <image class="author-avatar" src="{{topic.member.avatar_mini}}"></image>
-    <text class="author-name">{{topic.member.username}}</text>
+  <view class="item_top">
+    <image class="author-avatar fl" src="{{topic.member.avatar_mini}}"></image>
+    <view class='item_intro'>
+      <text class="item-author inline">{{topic.member.username}}</text>
+      <view class="item-tag inline fr">{{ topic.node.title }}</view>
+    </view>
+    <text wx:if="{{topic.replies != 0}}"  class='last_reply'>最后回复：{{topic.last_reply_by}}</text>
   </view>
-  <wemark md="{{topic.content}}" link highlight type="wemark"></wemark>
+  
+  <text class="title">{{ topic.title }}</text>
+  <!-- <wemark class='content' md="{{ topic.content_rendered }}" type="rich-text"></wemark> -->
   <!-- <wemark md="{{md}}" link highlight type="wemark"></wemark> -->
-  <!-- <text class="content">{{topic.content}}</text> -->
+  <view class='content'>{{ topic.content }}</view>
   <view class="divider"></view>
 
   <view class="reply" wx:for="{{ replies }}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.member.username}}" bindtap="searchUser">
-    <view class="reply-left">
+    <view class='reply_top'>
+      <image class="avatar fl" src="{{item.member.avatar_mini}}"></image>
+      <text class="name">{{item.member.username}}</text>
+      <text class="floor">{{index +1 }}楼</text>
+      <text class="floor">·</text>
+      <text class="floor">{{item.created}}</text>
+    </view>
+    <view class="reply_conent">{{item.content}}</view>
+    <!-- <view class="reply-left">
       <image class="avatar" src="{{item.member.avatar_mini}}"></image>
       <text class="name">{{item.member.username}}</text>
     </view>
-    <view class="reply-right">{{item.content}} <text class="thanks">{{item.thanks}}</text></view>
+    <view class="reply-right">{{item.content}} <text class="thanks">{{item.thanks}}</text></view> -->
   </view>
 </view>

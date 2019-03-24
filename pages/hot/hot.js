@@ -2,7 +2,8 @@
 import { hotTopics } from '../../utils/API'
 Page({
   data: {
-    hotTopics: []
+    hotTopics: [],
+    is_show: 1
   },
   onLoad: function (options) {
     const self = this
@@ -15,6 +16,9 @@ Page({
       method: 'GET',
       success: function (res) {
         console.log(res.data);
+        if(res.data.last_reply_by == ""){
+          this.is_show = 0;
+        }
         self.setData({
           hotTopics: res.data
         })

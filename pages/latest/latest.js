@@ -11,6 +11,7 @@ Page({
      url: latestTopics,
      method: 'GET',
      success: function(res){
+       console.log(res.data.last_reply_by);
        self.setData({
          latestTopics : res.data
        })

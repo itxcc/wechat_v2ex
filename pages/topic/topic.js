@@ -1,5 +1,6 @@
 // pages/topic/topic.js
 import { topic, topicReplies,userinfo} from "../../utils/API"
+import { timestampFormat} from "../../utils/util"
 const md = require('./demo.md');
 Page({
   data: {
@@ -21,6 +22,7 @@ Page({
       url: `${topic}?id=${self.data.topicId}`,
       method: 'GET',
       success: function (res) {
+        console.log(res.data[0]);
         self.setData({
           topic: res.data[0]
         })
@@ -33,10 +35,12 @@ Page({
       url: `${topicReplies}?topic_id=${self.data.topicId}`,
       method: 'GET',
       success: function (res) {
+        for(let i=0;i<res.data.length;i++){
+          res.data[i].created = timestampFormat(res.data[i].created);
+        }
         self.setData({
           replies: res.data
         })
-        
         wx.hideToast()
       }
     })

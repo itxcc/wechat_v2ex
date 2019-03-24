@@ -1,14 +1,15 @@
 <!--pages/latest/latest.wxml-->
 <view class="container">
-  <view hover-class="hover" 
-  data-id="{{item.id}}" class="topic-item" bindtap="showContent" wx:for="{{ latestTopics }}" wx:key="id">
-    <image class="item-avatar item-left" src="{{item.member.avatar_mini}}"></image>
-    <view class="item-right">
-      <text class="item-title">{{ item.title }}</text>
-      <view class="item-tag inline">{{ item.node.title }}</view>
-      <view class="point"></view>
-      <text class="item-author inline">{{item.member.username}}</text>
-      <text class="replies">回复数:{{ item.replies }}</text>
-    </view>
+   <view  data-id="{{item.id}}" class="topic-item" bindtap="showContent" wx:for="{{ latestTopics }}" wx:key="id">
+    <view class='item_top'>
+      <image class="item-avatar fl" src="{{item.member.avatar_mini}}"></image>
+      <view class='item_intro'>
+        <text class="item-author inline">{{item.member.username}}</text>
+        <view class="reply inline fr">回复:{{ item.replies }}</view>
+        <view class="item-tag inline fr">{{ item.node.title }}</view>
+      </view>
+      <text wx:if="{{item.replies != 0}}"  class='last_reply'>最后回复：{{item.last_reply_by}}</text>
+    </view >
+    <text class="item-title">{{ item.title }}</text>
   </view>
 </view>

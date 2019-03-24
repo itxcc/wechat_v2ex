@@ -1,17 +1,21 @@
 /* pages/node/node.wxss */
-.container {
-    padding:30rpx 0 0
+.node-list{
+    width: 95%;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
-
 .node-item {
-    width: 100vw;
-    height:100rpx;
-    line-height: 100rpx;
-    border-bottom:1px solid #ddd;
-    font-size:14px;
+    padding: 0 5px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border:1px solid #ddd;
+    font-size:12px;
     color:#333;
-}
+    margin:5px;
 
-.node-title {
-    padding-left:30px;
 }

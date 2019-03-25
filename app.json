@@ -43,5 +43,11 @@
         "selectedIconPath": "/img/nodeS.png"
       }
     ]
+  },
+  "plugins": {
+    "htmltowxml": {
+      "version": "1.3.1",
+      "provider": "wxa51b9c855ae38f3c"
+    }
   }
 }

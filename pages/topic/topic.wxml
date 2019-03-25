@@ -11,9 +11,10 @@
   </view>
   
   <text class="title">{{ topic.title }}</text>
-  <!-- <wemark class='content' md="{{ topic.content_rendered }}" type="rich-text"></wemark> -->
+  <htmltowxml text="{{topic.content_rendered}}" bindWxmlTagATap="wxmlTagATap" ></htmltowxml>
+  
+  <wemark md="{{topic.content_rendered }}" link highlight type="wemark"></wemark>
   <!-- <wemark md="{{md}}" link highlight type="wemark"></wemark> -->
-  <view class='content'>{{ topic.content }}</view>
   <view class="divider"></view>
 
   <view class="reply" wx:for="{{ replies }}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.member.username}}">

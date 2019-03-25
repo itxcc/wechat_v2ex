@@ -1,5 +1,6 @@
 {
 	"usingComponents": {
-		"wemark": "../wemark/wemark"
+		"wemark": "../wemark/wemark",
+		"htmltowxml": "../html2wxml-component/html2wxml"
 	}
 }

@@ -33,7 +33,7 @@
 
 <view class="html2wxml hljs-style-{{highlightStyle}}">
     <block wx:if="{{nodes == undefined}}">
-        <view wx:if="{{showLoading}}" style="padding:20px 0;width:100%;display:flex;justify-content:center;align-items:center">
+        <view wx:if="{{showLoading}}" style="padding:20px 0;width:100vw;display:flex;justify-content:center;align-items:center">
             <image class="loading" src="./images/loading.png"></image>
         </view>
     </block>

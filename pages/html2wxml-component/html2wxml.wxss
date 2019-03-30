@@ -46,7 +46,8 @@
 .loading {
     width: 80rpx;
     height: 80rpx;
-    transform-origin: 52.5% 50.5%;
+    margin: auto;
+    transform-origin: 50% 50%;
     animation: loading 0.8s steps(1, start) infinite;
 }
 

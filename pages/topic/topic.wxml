@@ -12,8 +12,7 @@
   
   <text class="title">{{ topic.title }}</text>
   <htmltowxml text="{{topic.content_rendered}}" bindWxmlTagATap="wxmlTagATap" ></htmltowxml>
-  
-  <wemark md="{{topic.content_rendered }}" link highlight type="wemark"></wemark>
+  <!-- <wemark md="{{topic.content_rendered }}" link highlight type="wemark"></wemark> -->
   <!-- <wemark md="{{md}}" link highlight type="wemark"></wemark> -->
   <view class="divider"></view>
 

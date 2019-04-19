@@ -1,4 +1,8 @@
 /* pages/topic/topic.wxss */
+/**基础风格样式**/
+@import '/towxml/style/main.wxss';
+/**主题配色（浅色样式）**/
+@import '/towxml/style/theme/light.wxss';
 
 .container {
   width: 100%;
@@ -41,8 +45,7 @@
   width: 95%;
   padding: 0;
   margin: 0 auto;
-  line-height: 20px;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 .wemark_wrapper{
   width: 95%;
@@ -101,4 +104,17 @@
   color: rgb(57,57,57);
   white-space:pre-wrap;
   overflow: hidden;
+}
+.share{
+  position: fixed;
+  right: 0;
+  bottom: 100rpx;
+  
+}
+.share button{
+  width: 120rpx;
+  border-radius: 0;
+  font-size: 28rpx;
+  color: rgb(28,211,143);
+  border: none;
 }

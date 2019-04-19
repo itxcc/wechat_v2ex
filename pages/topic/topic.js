@@ -1,13 +1,13 @@
 // pages/topic/topic.js
 import { topic, topicReplies,userinfo} from "../../utils/API"
 import { timestampFormat} from "../../utils/util"
-const md = require('./demo.md');
+const app = getApp();
 Page({
   data: {
     topicId: null,
     topic: {},
     replies: [],
-    md: md
+    article:{}
   },
   onLoad: function (options) {
     wx.showToast({
@@ -22,10 +22,18 @@ Page({
       url: `${topic}?id=${self.data.topicId}`,
       method: 'GET',
       success: function (res) {
-        console.log(res.data[0]);
         self.setData({
           topic: res.data[0]
         })
+        //转化markdown
+        let data = app.towxml.toJson(
+          res.data[0].content_rendered,        // `markdown`或`html`文本内容
+          'markdown'              // `markdown`或`html`
+        );
+        data.theme = 'light';
+        self.setData({
+          article: data
+        });
         wx.setNavigationBarTitle({
           title: `${self.data.topic.node.title}`
         })
@@ -47,9 +55,14 @@ Page({
   },
   searchUser(e){
     const userId = e.currentTarget.dataset.name;
-    console.log(userId);
     wx.navigateTo({
       url: `/pages/user/user?value=${userId}`
     })
-  }
+  },
+  onShareAppMessage: function (res) {
+    return {
+      title: 'v2ex简易版',
+      path: '/pages/topic/topic?id='+this.data.topicId
+    }
+  },
 })

@@ -1,6 +1,8 @@
-
 <!--pages/topic/topic.wxml-->
+
 <view class="container">
+  <import src="/towxml/entry.wxml"/>
+
   <view class="item_top">
     <image class="author-avatar fl" src="{{topic.member.avatar_mini}}"></image>
     <view class='item_intro'>
@@ -9,11 +11,11 @@
     </view>
     <text wx:if="{{topic.replies != 0}}"  class='last_reply'>最后回复：{{topic.last_reply_by}}</text>
   </view>
-  
   <text class="title">{{ topic.title }}</text>
-  <htmltowxml text="{{topic.content_rendered}}" bindWxmlTagATap="wxmlTagATap" ></htmltowxml>
-  <!-- <wemark md="{{topic.content_rendered }}" link highlight type="wemark"></wemark> -->
-  <!-- <wemark md="{{md}}" link highlight type="wemark"></wemark> -->
+  <view class="content">
+    <template is="entry" data="{{...article}}"/>
+
+  </view>
   <view class="divider"></view>
 
   <view class="reply" wx:for="{{ replies }}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.member.username}}">
@@ -30,5 +32,8 @@
       <text class="name">{{item.member.username}}</text>
     </view>
     <view class="reply-right">{{item.content}} <text class="thanks">{{item.thanks}}</text></view> -->
+  </view>
+  <view class='share'>
+		<button open-type='share'>分享</button>
   </view>
 </view>

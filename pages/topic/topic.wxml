@@ -21,10 +21,8 @@
   <view class="reply" wx:for="{{ replies }}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.member.username}}">
     <view class='reply_top'>
       <image class="avatar fl" src="{{item.member.avatar_mini}}"></image>
-      <text class="name">{{item.member.username}}</text>
-      <text class="floor">{{index +1 }}楼</text>
-      <text class="floor">·</text>
-      <text class="floor">{{item.created}}</text>
+      <view class="name">{{item.member.username}}</view>
+      <view class="floor"> {{index +1 }}楼  ·  {{item.created}}</view>
     </view>
     <view class="reply_conent">{{item.content}}</view>
     <!-- <view class="reply-left">
@@ -35,5 +33,8 @@
   </view>
   <view class='share'>
 		<button open-type='share'>分享</button>
+  </view>
+  <view class='share' style="bottom:200rpx">
+		<button bindtap="toIndex">首页</button>
   </view>
 </view>

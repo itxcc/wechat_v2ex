@@ -11,12 +11,13 @@
 }
 .item_top{
   width: 95%;
-  height: 40px;
+  height: 60rpx;
   margin: 5px auto;
 }
 .item_intro{
   width: auto;
-  height: 20px;
+  height: 30rpx;
+  line-height: 25rpx;
 }
 .item-author{
   display: inline-block;
@@ -24,10 +25,10 @@
   line-height: 20px;
 }
 .item-tag{
-  font-size: 12px;
+  font-size: 24rpx;
   width: auto;
-  height: 20px;
-  line-height: 20px;
+  height: 40rpx;
+  line-height: 40rpx;
   padding: 0 5px;
   background-color: rgb(242,242,242);
   color: rgb(204,204,204);
@@ -37,9 +38,8 @@
 }
 .title {
   width: 95%;
-  font-size: 16px;
-  line-height: 1.2;
-  margin: 5px auto;
+  font-size: 28rpx;
+  margin: 20rpx  auto 10rpx auto;
 }
 .content{
   width: 95%;
@@ -50,10 +50,11 @@
 .wemark_wrapper{
   width: 95%;
 }
-.author-avatar {
-  width: 40px;
-  height: 40px;
+.author-avatar,.avatar {
+  width: 60rpx;
+  height: 60rpx;
   border-radius: 2px;
+  margin: 0;
 }
 .author-name {
   font-size: 12px;
@@ -66,41 +67,33 @@
 .reply {
   position: relative;
   width: 95%;
-  font-size: 14px;
+  font-size: 24rpx;
   margin: 0 auto;
   border-bottom: 1px solid rgb(250,250,250);
-  margin: 5px auto;
+  margin: 10rpx auto;
 }
 .reply_top{
   width: 100%;
-  height: 40px;
+  height: 60rpx;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 2px;
-}
-
-.name {
+.name,.floor {
   width: 85%;
-  height: 20px;
-  line-height: 20px;
-  font-size: 12px;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
   color: rgb(57,57,57);
   margin-left: 5px;
-  display: inline-block;
+  float: left;
 }
 .floor{
-  float: left;
-  font-size: 12px;
-  margin-left: 5px;
+  color:rgb(204,204,204);
 }
 
 .reply_conent {
-  margin: 5px auto;
+  margin: 20rpx  auto 10rpx 0;
   text-align: left;
-  font-size: 14px;
+  font-size: 28rpx;
   color: rgb(57,57,57);
   white-space:pre-wrap;
   overflow: hidden;

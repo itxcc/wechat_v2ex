@@ -60,9 +60,15 @@ Page({
     })
   },
   onShareAppMessage: function (res) {
+    let title = this.data.topic.title;
     return {
-      title: 'v2ex简易版',
+      title: title,
       path: '/pages/topic/topic?id='+this.data.topicId
     }
   },
+  toIndex(){
+    wx.switchTab({
+      url:'../hot/hot'
+    })
+  }
 })
